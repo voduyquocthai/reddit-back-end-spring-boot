@@ -32,4 +32,6 @@ public class Subreddit {
     private Instant createdDate;
     @ManyToOne(fetch = LAZY)
     private User user;
+
+
 }
