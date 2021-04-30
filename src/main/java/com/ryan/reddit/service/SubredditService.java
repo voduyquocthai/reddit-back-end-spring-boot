@@ -20,6 +20,7 @@ import static java.util.stream.Collectors.toList;
 public class SubredditService {
 
     private final SubredditRepository subredditRepository;
+
     private final SubredditMapper subredditMapper;
 
     @Transactional
