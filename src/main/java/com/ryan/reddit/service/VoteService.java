@@ -32,7 +32,7 @@ public class VoteService {
                 voteByPostAndUser.get().getVoteType()
                         .equals(voteDto.getVoteType())) {
             throw new SpringRedditException("You have already "
-                    + voteDto.getVoteType() + "'d for this post");
+                    + voteDto.getVoteType() + "ed for this post");
         }
         if (UPVOTE.equals(voteDto.getVoteType())) {
             post.setVoteCount(post.getVoteCount() + 1);
