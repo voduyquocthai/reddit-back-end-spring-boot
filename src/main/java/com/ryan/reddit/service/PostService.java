@@ -7,13 +7,19 @@ import com.ryan.reddit.exception.SubredditNotFoundException;
 import com.ryan.reddit.mapper.PostMapper;
 import com.ryan.reddit.model.Post;
 import com.ryan.reddit.model.Subreddit;
+import com.ryan.reddit.model.User;
 import com.ryan.reddit.repository.PostRepository;
 import com.ryan.reddit.repository.SubredditRepository;
 import com.ryan.reddit.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 @Service
 @AllArgsConstructor
